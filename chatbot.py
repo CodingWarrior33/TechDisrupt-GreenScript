@@ -10,7 +10,7 @@ from gtts import gTTS
 import io
 from audio_recorder_streamlit import audio_recorder
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 conversation_history = []
 
