@@ -27,40 +27,34 @@ Leverage an AI-powered chat and voice assistant dedicated to helping you live mo
 
 ## Installation
 
-To run GreenScript AI locally, follow these steps:
+### For Ubuntu/Debian Users
+
+Follow these steps to run GreenScript AI locally:
 
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/yourusername/GreenScript-AI.git
 
-2. **Navigate to the project directory:**
-   ```bash
-   cd GreenScript-AI
-
-3. **Install dependencies:**
+2. **Install Python dependencies:**
    ```bash
    pip install -r requirements.txt
-   ```
-   **If you're using Ubuntu, you may need to install additional   system packages:**
+
+3. **Install additional system packages:**
    ```bash
    sudo apt-get update && sudo apt-get install -y linux-tools-common linux-tools-generic dmidecode sysstat net-tools iproute2 pciutils intel-gpu-tools coreutils procps upower util-linux && sudo ubuntu-drivers autoinstall
 
-## Requirements
 
-**Ensure you have the following packages installed:**
-   ```makefile
-audio_recorder_streamlit==0.0.8
-fpdf==1.7.2
-gTTS==2.5.1
-openai==0.28.0
-pandas==1.5.3
-PyPDF2==3.0.1
-Requests==2.31.0
-SpeechRecognition==3.10.1
-streamlit==1.32.2
-streamlit_lottie==0.0.5
-streamlit_option_menu==0.3.12
-```
+### For Non-Ubuntu/Debian Users
+1. **Install Docker on your machine:**
+Please refer to [Docker documentation](https://docs.docker.com/?_gl=1*8yx55*_ga*MTg4MDA5NzI0Ni4xNzEwODI3NDAy*_ga_XJWPQMJYHQ*MTcxMDgyNzQwMS4xLjAuMTcxMDgyNzQwMS42MC4wLjA.) for installation instructions.
+
+2. **Build the Docker image:**
+   ```bash
+   docker build -t techdisrupt_app .
+
+3. **Run the Docker container, exposing the necessary ports:**
+   ```bash
+   docker run -p 8501:8501 techdisrupt_app
 
 ## Usage
 
@@ -69,21 +63,16 @@ streamlit_option_menu==0.3.12
 streamlit run app.py
 ```
 
+`Note if you are using docker the command will automatically execute`
+
 Once the application is running, navigate through the different pages to explore the features offered by GreenScript AI.
 
 ## Configuration
 
 The theme of the Streamlit application can be customized using the config.toml file. Modify the theme settings according to your preferences.
 
-## Contributing
-
-Contributions are welcome! If you'd like to contribute to GreenScript AI, please fork the repository and submit a pull request with your proposed changes.
-
-
 ## Acknowledgements
 
 [Streamlit](https://docs.streamlit.io) - For providing the platform to create interactive web applications with Python.
 
 [OpenAI](https://platform.openai.com/docs/introduction) - For providing the GPT-3.5 model used in the chatbot feature.
-
-
